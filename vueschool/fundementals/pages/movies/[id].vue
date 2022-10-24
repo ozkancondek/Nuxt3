@@ -42,6 +42,7 @@ const { data } = await useFetch(
     key: `/movies/${route.params.id}`,
     onResponse({ request, response }) {
       if (response._data.Error === "Incorrect IMDB ID.") {
+        // is static error explanation comes from api
         showError({
           statusCode: 404,
           statusMessage: "Uuups!!! Something went wrong",
