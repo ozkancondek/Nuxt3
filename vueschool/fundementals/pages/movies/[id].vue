@@ -1,6 +1,13 @@
 <template>
   <div>
-    movies/15 <br />
-    $route.params.id :{{ $route.params.id }}
+    {{ data }}
   </div>
 </template>
+
+<script setup>
+const route = useRoute();
+
+const { data } = useAsyncData(() => {
+  return $fetch(`http://www.omdbapi.com/?apikey=8e3f600b&i=${route.params.id}`);
+});
+</script>
