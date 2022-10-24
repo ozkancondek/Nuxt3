@@ -7,6 +7,7 @@
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="movies">Movies</NuxtLink>
       <NuxtLink to="login">Login</NuxtLink>
+
       <NuxtLink to="https://v3.nuxtjs.org/" target="_blank"
         >Nuxt3 Website</NuxtLink
       >
