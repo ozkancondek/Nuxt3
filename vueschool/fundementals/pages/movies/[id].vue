@@ -7,6 +7,8 @@
 <script setup>
 const route = useRoute();
 //i will give unique parameter for cache
+
+/*
 const { data } = useAsyncData(
   `/movies/${route.params.id}`,
   () => {
@@ -26,8 +28,26 @@ const { data } = useAsyncData(
       Plot:data.Plotm,
       Title : data.Title
      }
-    }, */
+    },  
   }
 );
-console.log(data);
+
+*/
+//Another shorter method is useFetch()
+
+const { data } = useFetch(
+  `http://www.omdbapi.com/?apikey=8e3f600b&i=${route.params.id}`,
+  {
+    pick: ["Plot", "Title"],
+    key: `/movies/${route.params.id}`,
+    onResponse({ request, response }) {
+      if (response._data.Error === "Incorrect IMDB ID.") {
+        showError({
+          statusCode: 404,
+          statusMessage: "Uuups!!! Something went wrong",
+        });
+      }
+    },
+  }
+);
 </script>
