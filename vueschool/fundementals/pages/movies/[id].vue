@@ -28,14 +28,14 @@ const { data } = useAsyncData(
       Plot:data.Plotm,
       Title : data.Title
      }
-    },  
+    },   
   }
 );
 
 */
 //Another shorter method is useFetch()
 
-const { data } = useFetch(
+const { data } = await useFetch(
   `http://www.omdbapi.com/?apikey=8e3f600b&i=${route.params.id}`,
   {
     pick: ["Plot", "Title"],
@@ -50,4 +50,9 @@ const { data } = useFetch(
     },
   }
 );
+useHead({
+  /*   title: "my PAge", */
+  title: data.value.Title,
+  // i can also add meta: for SEO
+});
 </script>
