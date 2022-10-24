@@ -4,3 +4,4 @@
 =>to cerate page npx nuxi add page index
 => then go to app.vue and be sure that <NuxtPage> compenent there
 =>After that your index page will be shown automatically 
+=> npx nuxi add middleware logger add middleware  shrtcut
