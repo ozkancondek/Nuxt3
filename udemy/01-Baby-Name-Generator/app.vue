@@ -39,18 +39,21 @@ const options = reactive<IOptionns>({
           <button
             :class="options.gender === Gender.BOY && 'option-active'"
             class="option option-left"
+            @click="options.gender = Gender.BOY"
           >
             Boy
           </button>
           <button
             :class="options.gender === Gender.UNISEX && 'option-active'"
             class="option"
+            @click="options.gender = Gender.UNISEX"
           >
             Unisex
           </button>
           <button
             :class="options.gender === Gender.GIRL && 'option-active'"
             class="option option-right"
+            @click="options.gender = Gender.GIRL"
           >
             Girl
           </button>
@@ -62,12 +65,14 @@ const options = reactive<IOptionns>({
           <button
             :class="options.popularity === Popularity.TRENDY && 'option-active'"
             class="option option-left"
+            @click="options.popularity = Popularity.TRENDY"
           >
             Trendy
           </button>
           <button
             :class="options.popularity === Popularity.UNIQUE && 'option-active'"
             class="option option-right"
+            @click="options.popularity = Popularity.UNIQUE"
           >
             Unique
           </button>
@@ -79,18 +84,21 @@ const options = reactive<IOptionns>({
           <button
             :class="options.length === Length.LONG && 'option-active'"
             class="option option-left"
+            @click="options.length = Length.LONG"
           >
             Long
           </button>
           <button
             :class="options.length === Length.ALL && 'option-active'"
             class="option"
+            @click="options.length = Length.ALL"
           >
             All
           </button>
           <button
             :class="options.length === Length.SHORT && 'option-active'"
             class="option option-right"
+            @click="options.length = Length.SHORT"
           >
             Short
           </button>
