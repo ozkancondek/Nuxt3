@@ -1,3 +1,11 @@
+<script setup>
+const options = reactive({
+  gender: "Unisex",
+  popularity: "Unique",
+  length: "Long",
+});
+</script>
+
 <template>
   <div class="container">
     <h1>Baby Name Generator</h1>
@@ -6,24 +14,64 @@
       <div class="option-container">
         <h4>1) Choose a gender</h4>
         <div class="option-buttons">
-          <button class="option option-left">Boy</button>
-          <button class="option">Unisex</button>
-          <button class="option option-right">Girl</button>
+          <button
+            :class="options.gender === 'Boy' && 'option-active'"
+            class="option option-left"
+          >
+            Boy
+          </button>
+          <button
+            :class="options.gender === 'Unisex' && 'option-active'"
+            class="option"
+          >
+            Unisex
+          </button>
+          <button
+            :class="options.gender === 'Girl' && 'option-active'"
+            class="option option-right"
+          >
+            Girl
+          </button>
         </div>
       </div>
       <div class="option-container">
         <h4>2) Choose the name's popularity</h4>
         <div class="option-buttons">
-          <button class="option option-left">Trendy</button>
-          <button class="option option-right">Unique</button>
+          <button
+            :class="options.popularity === 'Trendy' && 'option-active'"
+            class="option option-left"
+          >
+            Trendy
+          </button>
+          <button
+            :class="options.popularity === 'Unique' && 'option-active'"
+            class="option option-right"
+          >
+            Unique
+          </button>
         </div>
       </div>
       <div class="option-container">
         <h4>2) Choose name's length</h4>
         <div class="option-buttons">
-          <button class="option option-left">Long</button>
-          <button class="option">All</button>
-          <button class="option option-right">Short</button>
+          <button
+            :class="options.length === 'Long' && 'option-active'"
+            class="option option-left"
+          >
+            Long
+          </button>
+          <button
+            :class="options.length === 'All' && 'option-active'"
+            class="option"
+          >
+            All
+          </button>
+          <button
+            :class="options.length === 'Short' && 'option-active'"
+            class="option option-right"
+          >
+            Short
+          </button>
         </div>
       </div>
     </div>
@@ -69,5 +117,9 @@ h1 {
 }
 .option-right {
   border-radius: 0 1rem 1rem 0;
+}
+.option-active {
+  background-color: rgb(249, 87, 89);
+  color: white;
 }
 </style>
