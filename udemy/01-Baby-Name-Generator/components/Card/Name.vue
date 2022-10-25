@@ -34,9 +34,12 @@ const removeName = () => {
 }
 .card p {
   position: absolute;
-  top: -29%;
+  top: -20%;
   left: 92.5%;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.178);
+  color: rgba(255, 255, 255, 0.5);
+}
+.card p:hover {
+  color: aqua;
 }
 </style>
