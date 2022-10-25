@@ -1,0 +1,7 @@
+=>Why Nuxt
+    -File routing system
+    -Auto import
+    -Composables (Managing global state)
+    -Server can be created
+    -Middleware
+    -Plugin
