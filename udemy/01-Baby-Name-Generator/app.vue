@@ -1,8 +1,30 @@
-<script setup>
-const options = reactive({
-  gender: "Unisex",
-  popularity: "Unique",
-  length: "Long",
+<script setup lang="ts">
+enum Gender {
+  GIRL = "Girl",
+  BOY = "Boy",
+  UNISEX = "Unisex",
+}
+enum Popularity {
+  TRENDY = "Trendy",
+  UNIQUE = "Unique",
+}
+
+enum Length {
+  LONG = "Long",
+  ALL = "All",
+  SHORT = "Short",
+}
+
+interface IOptionns {
+  gender: Gender;
+  popularity: Popularity;
+  length: Length;
+}
+
+const options = reactive<IOptionns>({
+  gender: Gender.GIRL,
+  popularity: Popularity.TRENDY,
+  length: Length.ALL,
 });
 </script>
 
@@ -15,19 +37,19 @@ const options = reactive({
         <h4>1) Choose a gender</h4>
         <div class="option-buttons">
           <button
-            :class="options.gender === 'Boy' && 'option-active'"
+            :class="options.gender === Gender.BOY && 'option-active'"
             class="option option-left"
           >
             Boy
           </button>
           <button
-            :class="options.gender === 'Unisex' && 'option-active'"
+            :class="options.gender === Gender.UNISEX && 'option-active'"
             class="option"
           >
             Unisex
           </button>
           <button
-            :class="options.gender === 'Girl' && 'option-active'"
+            :class="options.gender === Gender.GIRL && 'option-active'"
             class="option option-right"
           >
             Girl
@@ -38,13 +60,13 @@ const options = reactive({
         <h4>2) Choose the name's popularity</h4>
         <div class="option-buttons">
           <button
-            :class="options.popularity === 'Trendy' && 'option-active'"
+            :class="options.popularity === Popularity.TRENDY && 'option-active'"
             class="option option-left"
           >
             Trendy
           </button>
           <button
-            :class="options.popularity === 'Unique' && 'option-active'"
+            :class="options.popularity === Popularity.UNIQUE && 'option-active'"
             class="option option-right"
           >
             Unique
@@ -55,19 +77,19 @@ const options = reactive({
         <h4>2) Choose name's length</h4>
         <div class="option-buttons">
           <button
-            :class="options.length === 'Long' && 'option-active'"
+            :class="options.length === Length.LONG && 'option-active'"
             class="option option-left"
           >
             Long
           </button>
           <button
-            :class="options.length === 'All' && 'option-active'"
+            :class="options.length === Length.ALL && 'option-active'"
             class="option"
           >
             All
           </button>
           <button
-            :class="options.length === 'Short' && 'option-active'"
+            :class="options.length === Length.SHORT && 'option-active'"
             class="option option-right"
           >
             Short
