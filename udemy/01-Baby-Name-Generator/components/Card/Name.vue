@@ -1,14 +1,23 @@
 <script setup lang="ts">
+import { emit } from "process";
+
 interface NameProps {
   name: string;
+  index: number;
 }
 const props = defineProps<NameProps>();
+
+const emit = defineEmits("remove");
+
+const removeName = () => {
+  emit("remove", props.index);
+};
 </script>
 
 <template>
   <div class="card">
     <h4>{{ name }}</h4>
-    <p>x</p>
+    <p @click="removeName">x</p>
   </div>
 </template>
 

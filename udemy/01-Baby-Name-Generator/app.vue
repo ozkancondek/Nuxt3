@@ -44,9 +44,19 @@ const optionsArray = [
   },
 ];
 
+const removeName = (index: number) => {
+  const filteredNames = [...selectedNames.value];
+  filteredNames.splice(index, 1);
+  selectedNames.value = filteredNames;
+};
+
 useHead({
   title: "Find-Baby-Name",
 });
+
+const deleteName = (name) => {
+  console.log(name);
+};
 </script>
 
 <template>
@@ -65,9 +75,11 @@ useHead({
     </div>
     <div class="cards-container">
       <CardName
-        v-for="name in selectedNames"
+        @remove="() => removeName(index)"
+        v-for="(name, index) in selectedNames"
         :key="name"
         :name="name"
+        :index="index"
       ></CardName>
     </div>
   </div>
