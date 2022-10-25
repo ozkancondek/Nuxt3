@@ -1,6 +1,5 @@
-<script lang="ts" setup>
-import { Gender, Length, Popularity } from "../data";
-
+<script setup lang="ts">
+import { Gender, Popularity, Length } from "@/data";
 interface OptionProps {
   option: {
     title: string;
@@ -14,7 +13,6 @@ interface OptionProps {
   };
 }
 const props = defineProps<OptionProps>();
-
 const computeButtonClasses = (value, index) => {
   const classNames = [];
   if (props.options[props.option.category] === value) {
@@ -34,8 +32,8 @@ const computeButtonClasses = (value, index) => {
       <button
         v-for="(value, index) in option.buttons"
         :key="value"
-        :class="computeButtonClasses(value, index)"
         class="option"
+        :class="computeButtonClasses(value, index)"
         @click="options[option.category] = value"
       >
         {{ value }}
