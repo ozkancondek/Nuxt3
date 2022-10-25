@@ -1,19 +1,5 @@
 <script setup lang="ts">
-enum Gender {
-  GIRL = "Girl",
-  BOY = "Boy",
-  UNISEX = "Unisex",
-}
-enum Popularity {
-  TRENDY = "Trendy",
-  UNIQUE = "Unique",
-}
-
-enum Length {
-  LONG = "Long",
-  ALL = "All",
-  SHORT = "Short",
-}
+import { Gender, Popularity, Length, names } from "./data";
 
 interface IOptionns {
   gender: Gender;
@@ -26,6 +12,8 @@ const options = reactive<IOptionns>({
   popularity: Popularity.TRENDY,
   length: Length.ALL,
 });
+
+const selectedNames = ref<string[]>([]);
 </script>
 
 <template>
@@ -104,7 +92,9 @@ const options = reactive<IOptionns>({
           </button>
         </div>
       </div>
+      <button class="primary">Find Names</button>
     </div>
+    {{ selectedNames }}
   </div>
 </template>
 
@@ -151,5 +141,15 @@ h1 {
 .option-active {
   background-color: rgb(249, 87, 89);
   color: white;
+}
+.primary {
+  background-color: rgb(249, 87, 89);
+  color: white;
+  cursor: pointer;
+  border-radius: 6.5rem;
+  border: none;
+  padding: 0.75rem 4rem;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 </style>
