@@ -4,7 +4,7 @@
       <h1>Welcome to Restaurantly</h1>
 
       <hr />
-      <a href="/restaurants">Go to Restaurants</a>
+      <NuxtLink href="/restaurants">Go to Restaurants</NuxtLink>
     </div>
   </div>
 </template>
