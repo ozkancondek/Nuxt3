@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <div class="container">
       <h1>Welcome to Restaurantly</h1>
 
