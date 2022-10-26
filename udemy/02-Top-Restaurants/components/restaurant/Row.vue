@@ -47,4 +47,7 @@ const props = defineProps<RowProps>();
   width: auto;
   font-weight: 500;
 }
+.link:hover {
+  color: rgb(186, 210, 55);
+}
 </style>
