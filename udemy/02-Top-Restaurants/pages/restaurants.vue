@@ -3,7 +3,9 @@
 <template>
   <div>
     <Nav />
-    Page: foo
+    <div class="container">
+      <RestaurantTable />
+    </div>
   </div>
 </template>
 
