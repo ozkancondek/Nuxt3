@@ -1,5 +1,9 @@
+<script setup>
+const { data } = useFetch("http://localhost:3000/api/todo");
+</script>
+
 <template>
   <div>
-    <NuxtWelcome />
+    {{ data }}
   </div>
 </template>
