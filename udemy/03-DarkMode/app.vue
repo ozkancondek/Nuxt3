@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div :style="isDarkMode ? { backgroundColor: 'black' } : null">
     <Nav />
     <Heading />
     <Cards />
   </div>
 </template>
 <script setup>
+const { isDarkMode } = useDarkMode();
 useHead({
   title: "DarkMode",
 });

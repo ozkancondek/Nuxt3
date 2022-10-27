@@ -3,8 +3,8 @@ const { isDarkMode } = useDarkMode();
 </script>
 
 <template>
-  <nav>
-    <div>
+  <nav :style="isDarkMode ? { backgroundColor: 'rgb(73,72,72)' } : null">
+    <div :style="isDarkMode ? { color: 'white' } : null">
       <h1>Artikle</h1>
 
       <label class="switch">

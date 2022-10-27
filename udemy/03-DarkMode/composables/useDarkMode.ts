@@ -1,5 +1,5 @@
 export const useDarkMode = () => {
-  const isDarkMode = useState("darkMode",()=>false)
+  const isDarkMode = useState("darkMode",()=>true)
 
   return {isDarkMode}
   
