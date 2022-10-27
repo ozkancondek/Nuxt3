@@ -1,4 +1,10 @@
-<script lang="ts" setup></script>
+<script setup>
+const { name } = useRoute();
+
+useHead({
+  title: name,
+});
+</script>
 
 <template>
   <div>
