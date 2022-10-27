@@ -1,5 +1,5 @@
 import { db } from "../db/index";
-//import { sendError } from "h3";
+import { sendError } from "h3";
 
 export default defineEventHandler((e) => {
   const method = e.req.method;
@@ -16,15 +16,14 @@ export default defineEventHandler((e) => {
       return false;
     });
 
-    // if (!todo) {
-    //   const TodoNotFoundError = createError({
-    //     statusCode: 404,
-    //     statusMessage: "Todo not found",
-    //     data: {},
-    //   });
-
-    //   sendError(e, TodoNotFoundError);
-    // }
+     if (!todo) {
+       const TodoNotFoundError = createError({
+         statusCode: 404,
+         statusMessage: "Todo not found",
+         data: {},
+       })
+       sendError(e, TodoNotFoundError);
+     }
 
     return { todo, index };
   };
