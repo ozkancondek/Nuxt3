@@ -1,0 +1,2 @@
+-install pinia and go to main.js file
+-import createPinia and add plugin 
