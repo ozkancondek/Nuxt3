@@ -16,6 +16,7 @@ export const useProductStore = defineStore("ProductStore", {
     async fill() {
       // this.products = products; //static method
       this.products = (await import("@/data/products.json")).default;
+      // works like this.products = await axios("apiadress")
     },
   },
   //Getters
