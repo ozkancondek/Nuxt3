@@ -17,7 +17,14 @@ export const useCardStore = defineStore("CardStore", {
     }, */
     isEmpty: (state) => state.items.length === 0,
     //to make order in cardStore by name
-    grouped: (state) => groupBy(state.items, (item) => item.name),
+    //grouped: (state) => groupBy(state.items, (item) => item.name),
+    grouped: (state) => {
+      const grouped = groupBy(state.items, (item) => item.name);
+      const sorted = Object.keys(grouped).sort();
+      const inOrder = {};
+      sorted.forEach((key) => (inOrder[key] = grouped[key]));
+      return inOrder;
+    },
     total: (state) => state.items.reduce((p, c) => p + c.price, 0),
   },
   actions: {
@@ -30,6 +37,10 @@ export const useCardStore = defineStore("CardStore", {
     },
     clearItem(itemName) {
       this.items = this.items.filter((item) => item.name !== itemName);
+    },
+    setItemCount(item, count) {
+      this.clearItem(item.name);
+      this.addItems(count, item);
     },
   },
 });
