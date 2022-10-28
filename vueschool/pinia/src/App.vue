@@ -5,6 +5,7 @@ import ProductCard from "@/components/ProductCard.vue";
 import { useProductStore } from "./stores/ProductStore";
 const productStore = useProductStore();
 //const { products } = storeToRefs(useProductStore());
+productStore.fill(); //fill the product list
 </script>
 
 <template>
