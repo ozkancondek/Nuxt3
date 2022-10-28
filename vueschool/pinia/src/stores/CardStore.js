@@ -1,4 +1,4 @@
-import { groupBy } from "lodash";
+import { groupBy, reduce } from "lodash";
 import { defineStore } from "pinia";
 
 export const useCardStore = defineStore("CardStore", {
@@ -18,6 +18,7 @@ export const useCardStore = defineStore("CardStore", {
     isEmpty: (state) => state.items.length === 0,
     //to make order in cardStore by name
     grouped: (state) => groupBy(state.items, (item) => item.name),
+    total: (state) => state.items.reduce((p, c) => p + c.price, 0),
   },
   actions: {
     addItems(count, item) {
@@ -26,6 +27,9 @@ export const useCardStore = defineStore("CardStore", {
       for (let i = 0; i < count; i++) {
         this.items.push(item);
       }
+    },
+    clearItem(itemName) {
+      this.items = this.items.filter((item) => item.name !== itemName);
     },
   },
 });
