@@ -5,9 +5,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "storybook": "start-storybook -p 6006 -s ./public,./assets"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.12"
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/vue3": "^6.5.13",
+    "nuxt": "3.0.0-rc.12",
+    "storybook-builder-vite": "^0.1.23"
   }
 }
