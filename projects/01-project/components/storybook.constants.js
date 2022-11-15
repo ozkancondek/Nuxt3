@@ -1,0 +1,6 @@
+export const STORYBOOK_CMS_PREFIX = "CMS Components";
+export const STORYBOOK_UTILITIES_PREFIX = "Utilities";
+export const STORYBOOK_UI_COMPONENTS_PREFIX = "UI";
+
+export const STORYBOOK_MAGAZIN_PREFIX = `${STORYBOOK_CMS_PREFIX}/Magazin`;
+export const STORYBOOK_MARKETING_PREFIX = `${STORYBOOK_CMS_PREFIX}/Marketing`;

@@ -1,5 +1,5 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <MagazinHeadline></MagazinHeadline>
   </div>
 </template>
