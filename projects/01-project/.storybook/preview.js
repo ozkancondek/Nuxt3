@@ -1,8 +1,8 @@
+import "../assets/tailwind.css";
 export const decorators = [
   (story) => ({
     components: { story },
-    template:
-      '<div class="tw" data-track-root="storybook"><story /><h1>devtoolbar</h1>  </div>',
+    template: '<div class="tw" data-track-root="storybook"><story />  </div>',
   }),
 ];
 

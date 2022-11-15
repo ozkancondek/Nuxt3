@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { PropType } from "vue";
+import { PropType, computed } from "vue";
 
 const SIZES = [null, "XXS", "XS", "S", "M", "L", "XL"];
 const DISPLAY = [null, "M", "L", "XL", "XXL"];

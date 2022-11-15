@@ -5,7 +5,7 @@ export default {
   title: `${STORYBOOK_UI_COMPONENTS_PREFIX}/Headline`,
   component: Headline,
   argTypes: {
-    size: { 
+    size: {
       control: { type: "select" },
       options: [null, "XXS", "XS", "S", "M", "L", "XL"],
     },
@@ -24,7 +24,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   components: { Headline },
   props: Object.keys(argTypes),
-  template: '<Headline v-bind="$props"></Headline>',
+  template: '<Headline v-bind="$props" v-bind="args"></Headline>',
 });
 
 export const Normal = Template.bind({});

@@ -10,9 +10,9 @@ export default defineNuxtConfig({
           ],
           link: [
             // <link rel="stylesheet" href="https://myawesome-lib.css">
-            { rel: 'stylesheet', href: 'https://assets.obi.de/css-utilities/public/css-dev/fonts.css' },
-            { rel: 'stylesheet', href: 'https://assets.obi.de/css-utilities/public/css-dev/global.css' },
-            { rel: 'stylesheet', href: 'https://assets.obi.de/css-utilities/public/css-dev/global-lg.css',media:"(min-width: 960px)"}
+             //{ rel: 'stylesheet', href: 'https://assets.obi.de/css-utilities/public/css-dev/fonts.css' },
+             //{ rel: 'stylesheet', href: 'https://assets.obi.de/css-utilities/public/css-dev/global.css' },
+             //{ rel: 'stylesheet', href: 'https://assets.obi.de/css-utilities/public/css-dev/global-lg.css',media:"(min-width: 960px)"}
 
           ],
           // please note that this is an area that is likely to change
@@ -22,8 +22,16 @@ export default defineNuxtConfig({
             // <noscript>Javascript is required</noscript>
             { children: 'Javascript is required' }
           ]
-        }
+        },
+        
       },
+      postcss: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
+  
     
  
 

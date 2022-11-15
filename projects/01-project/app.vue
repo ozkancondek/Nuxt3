@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <MagazinHeadline></MagazinHeadline>
-  </div>
+  <div></div>
 </template>
