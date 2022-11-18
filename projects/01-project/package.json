@@ -10,7 +10,6 @@
     "test": "vitest --run --reporter verbose --globals"
   },
   "devDependencies": {
-    "@nuxt/test-utils-edge": "^3.0.1-rc.0-27810184.d991a55",
     "@storybook/vue3": "^6.5.13",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vue/test-utils": "^2.2.3",

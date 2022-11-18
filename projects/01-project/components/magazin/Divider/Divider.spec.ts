@@ -11,3 +11,5 @@ it('renders Divider  correctly', () => {
   expect(wrapper.element).toMatchSnapshot()
 })
 
+// @types/jest
+//ts-jest
