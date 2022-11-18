@@ -8,6 +8,6 @@ const props = defineProps({
 </script>
 <template>
   <div>
-    <h2 class="tw-text-blue">{{ text }}</h2>
+    <h2 class="tw-text-blue">{{ text }} as</h2>
   </div>
 </template>

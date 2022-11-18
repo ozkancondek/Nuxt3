@@ -1,0 +1,8 @@
+// Vitest Snapshot v1
+
+exports[`renders Divider  correctly 1`] = `
+<hr
+  class="tw-border-0 tw-mx-auto tw-mb-8 tw-bg-orange tw-w-36 tw-h-0.5"
+  color="orange"
+/>
+`;
