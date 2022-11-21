@@ -3,8 +3,6 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
-
 const COLORS = ["orange", "gray"];
 const ORIENTATION = ["horizontal", "vertical"];
 
