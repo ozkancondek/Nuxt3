@@ -1,0 +1,33 @@
+// Vitest Snapshot v1
+
+exports[`renders ImageCaption with bottom caption correctly 1`] = `
+<div
+  class="tw-flex-row"
+  data-track-section="image_caption"
+  data-v-f4f13e04=""
+>
+  
+  
+  <rich-text-parser-stub
+    class="tw-py-3 image-caption__caption tw-text-base"
+    data-v-f4f13e04=""
+    html="<p>Hier wird ein Grillrost gereinigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>"
+  />
+</div>
+`;
+
+exports[`renders ImageCaption with inline caption correctly 1`] = `
+<div
+  class="tw-flex-row tw-h-full tw-relative"
+  data-track-section="image_caption"
+  data-v-f4f13e04=""
+>
+  
+  
+  <rich-text-parser-stub
+    class="tw-absolute tw-bottom-0 tw-w-full tw-bg-gray-100 tw-bg-opacity-80 tw-text-sm tw-py-2 tw-px-4"
+    data-v-f4f13e04=""
+    html="<p>Hier wird ein Grillrost gereinigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>"
+  />
+</div>
+`;
