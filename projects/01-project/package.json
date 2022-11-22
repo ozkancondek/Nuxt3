@@ -20,8 +20,10 @@
   },
   "dependencies": {
     "@nuxt/test-utils-edge": "^3.0.1-rc.0-27817134.e85e3ab",
+    "@pinia/testing": "^0.0.14",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-postcss": "^2.0.0",
+    "pinia": "^2.0.24",
     "postcss": "^8.4.19",
     "storybook-builder-vite": "^0.1.23",
     "tailwindcss": "^3.2.2"

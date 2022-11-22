@@ -5,9 +5,9 @@ import Image from '~/components/magazin/Image/Image.vue'
 test('renders Image  correctly', () => {
   //const pinia = createTestingPinia()
   const wrapper = shallowMount(Image, {
-    global: {
-     // plugins: [pinia],
-    },
+  /*   global: {
+     plugins: [pinia],
+    }, */
     mocks: {
       $t: () => {},
     },

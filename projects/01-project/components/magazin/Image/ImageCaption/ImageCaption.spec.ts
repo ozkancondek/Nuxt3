@@ -1,6 +1,20 @@
 import { shallowMount } from '@vue/test-utils'
 import ImageCaption from '~/components/magazin/Image/ImageCaption/ImageCaption.vue'
-import { Image } from '~/types/cms.types'
+export type Image = {
+  type: 'Image'
+  content: {
+    src: string
+    alt: string
+    caption?: string
+    captionAlignRight?: boolean
+    aspectRatio: number
+    originalAspectRatio?: number
+    fpX?: number
+    fpY?: number
+    fpZoom?: number
+    articleImage?: boolean
+  }
+}
 
 
 const image: Image = {
