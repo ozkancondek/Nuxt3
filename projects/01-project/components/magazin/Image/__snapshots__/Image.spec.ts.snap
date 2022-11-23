@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`renders Image  correctly 1`] = `
+<picture
+  class="tw-flex"
+>
+  
+  
+  <img
+    alt=""
+    class="tw-w-full tw-object-cover"
+    src=""
+  />
+</picture>
+`;

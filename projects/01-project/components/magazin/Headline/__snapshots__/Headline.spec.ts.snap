@@ -1,0 +1,26 @@
+// Vitest Snapshot v1
+
+exports[`renders Headline  correctly 1`] = `
+<h2
+  class="tw-pr-8 lg:tw-pr-6 tw-relative"
+  data-ui-name="headline"
+  data-v-f1b9ba30=""
+>
+  <span
+    class="tw--top-24 tw-absolute"
+    data-v-f1b9ba30=""
+    id=""
+  />
+  <span
+    class="tw-font-obi-bold tw-font-normal tw-text-4xl lg:tw-text-6xl tw-mb-4 lg:tw-mb-6 tw-relative tw-block"
+    data-v-f1b9ba30=""
+  >
+    <p
+      data-v-f1b9ba30=""
+    />
+    
+    
+    
+  </span>
+</h2>
+`;

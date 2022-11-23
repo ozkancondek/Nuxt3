@@ -11,6 +11,7 @@
       class="tw--top-24 tw-absolute"
     ></span>
     <span :class="classes">
+      <p>{{ fullPath }}</p>
       <slot>{{ text }}</slot>
     </span>
   </component>
@@ -18,6 +19,8 @@
 
 <script lang="ts">
 import { PropType, computed } from "vue";
+import { useHead } from "#head";
+import { useRoute } from "#app";
 
 const SIZES = [null, "XXS", "XS", "S", "M", "L", "XL"];
 const DISPLAY = [null, "M", "L", "XL", "XXL"];
@@ -57,6 +60,15 @@ export default {
     },
   },
   setup(props) {
+    const route = useRoute();
+    const fullPath = route.name;
+    useHead({
+      title: "store.page.meta.title,",
+      meta: " metaData,",
+      link: "links,",
+      script: " scripts,",
+    });
+
     const classes = computed(() => ({
       "tw-font-obi-bold tw-font-normal": true,
       /** size or h **/
@@ -95,7 +107,7 @@ export default {
     const highlightedClasses = computed(() => ({
       "headline-spacer": props.highlighted,
     }));
-    return { classes, highlightedClasses };
+    return { classes, highlightedClasses, fullPath };
   },
 };
 </script>
