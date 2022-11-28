@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { useRuntimeConfig } from "#imports";
+import { useRuntimeConfig } from "#app";
 
 import { PropType } from "vue";
 

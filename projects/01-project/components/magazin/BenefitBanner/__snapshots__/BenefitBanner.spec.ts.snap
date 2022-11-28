@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`renders BenefitBanner  correctly 1`] = `
+<div
+  data-v-82b439ab=""
+>
+  Happy People
+</div>
+`;

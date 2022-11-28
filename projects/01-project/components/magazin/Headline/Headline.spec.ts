@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Headline from '~/components/magazin/Headline/Headline.vue'
-
+import {test,expect} from "vitest"
 vi.mock('#app', () => {
     return {
       useRoute() {
@@ -27,10 +27,6 @@ vi.mock('#app', () => {
     }
   })
 test('renders Headline  correctly', () => {
-  const wrapper = shallowMount(Headline, {
-    mocks: {
-      $t: () => {},
-    },
-  })
+  const wrapper = shallowMount(Headline)
   expect(wrapper.element).toMatchSnapshot()
 })

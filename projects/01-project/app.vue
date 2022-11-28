@@ -1,7 +1,18 @@
 <template>
-  <div>here is page</div>
+  <div>{{ store.name }}</div>
+  <button @click="changeStore">click</button>
 </template>
 <script setup>
+import { createPinia } from "pinia";
+import { useStore } from "./store";
+const pinia = createPinia();
+const store = useStore(pinia);
+
+const changeStore = () => {
+  store.$patch({
+    name: "function",
+  });
+};
 useHead({
   title: "ozkan",
   meta: [

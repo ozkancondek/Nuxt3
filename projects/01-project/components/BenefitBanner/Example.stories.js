@@ -1,4 +1,4 @@
-import Example from "./Example.vue";
+import Example from "./BenefitBanner.vue";
 
 export default {
   title: "Example Folder/Example",
