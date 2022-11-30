@@ -25,3 +25,5 @@ test('renders Image  correctly', () => {
   })
   expect(wrapper.element).toMatchSnapshot()
 })
+
+
