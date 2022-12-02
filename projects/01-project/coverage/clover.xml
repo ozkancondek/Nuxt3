@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1669990779419" clover="3.2.0">
+  <project timestamp="1669990779419" name="All files">
+    <metrics statements="42" coveredstatements="35" conditionals="30" coveredconditionals="18" methods="17" coveredmethods="12" elements="89" coveredelements="65" complexity="0" loc="42" ncloc="42" packages="4" files="4" classes="4"/>
+    <package name="BenefitBanner">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="BenefitBanner.vue" path="/Users/OCoendek/Desktop/repos/github/Nuxt3/projects/01-project/components/magazin/BenefitBanner/BenefitBanner.vue">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Divider">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="Divider.vue" path="/Users/OCoendek/Desktop/repos/github/Nuxt3/projects/01-project/components/magazin/Divider/Divider.vue">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Headline">
+      <metrics statements="12" coveredstatements="10" conditionals="22" coveredconditionals="14" methods="6" coveredmethods="4"/>
+      <file name="Headline.vue" path="/Users/OCoendek/Desktop/repos/github/Nuxt3/projects/01-project/components/magazin/Headline/Headline.vue">
+        <metrics statements="12" coveredstatements="10" conditionals="22" coveredconditionals="14" methods="6" coveredmethods="4"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="107" count="1" type="stmt"/>
+        <line num="110" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Image">
+      <metrics statements="20" coveredstatements="15" conditionals="8" coveredconditionals="4" methods="7" coveredmethods="4"/>
+      <file name="Image.vue" path="/Users/OCoendek/Desktop/repos/github/Nuxt3/projects/01-project/components/magazin/Image/Image.vue">
+        <metrics statements="20" coveredstatements="15" conditionals="8" coveredconditionals="4" methods="7" coveredmethods="4"/>
+        <line num="2" count="0" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="2" falsecount="2"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="85" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

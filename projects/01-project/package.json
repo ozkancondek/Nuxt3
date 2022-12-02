@@ -8,11 +8,13 @@
     "postinstall": "nuxt prepare",
     "storybook": "start-storybook -p 6006 -s ./public,./assets",
     "test": "vitest ",
-    "test:update": "vitest -u"
+    "test:update": "vitest -u",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@storybook/vue3": "^6.5.13",
     "@vitejs/plugin-vue": "^3.2.0",
+    "@vitest/coverage-istanbul": "^0.25.3",
     "@vue/test-utils": "^2.2.3",
     "fs": "^0.0.1-security",
     "jsdom": "^20.0.2",
