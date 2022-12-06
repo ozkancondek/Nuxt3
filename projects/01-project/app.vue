@@ -1,10 +1,12 @@
 <template>
   <div>{{ store.name }}</div>
   <button @click="changeStore">click</button>
+  <DataFetch></DataFetch>
 </template>
 <script setup>
 import { createPinia } from "pinia";
 import { useStore } from "./store";
+
 const pinia = createPinia();
 const store = useStore(pinia);
 
