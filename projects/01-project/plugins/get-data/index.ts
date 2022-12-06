@@ -19,8 +19,7 @@ declare module '#app' {
 
 export default defineNuxtPlugin(() => {
     const getDataInfo =  getData()
-    console.log("5555");
-    console.log(getDataInfo());
+ 
     return {
       provide: {
         todoOne:   () =>   getDataInfo(),
