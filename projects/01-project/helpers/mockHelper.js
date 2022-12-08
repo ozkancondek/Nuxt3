@@ -2,7 +2,7 @@ vi.mock("#app", () => ({
   useRoute() {
     return {
       public: {
-        // Your public config!
+        // Your public conf ig!
       },
     };
   },
