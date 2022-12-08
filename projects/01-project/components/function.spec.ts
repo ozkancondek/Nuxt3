@@ -61,10 +61,6 @@ vi.mock('#app', () => ({
 }))
 
  
-vi.mock( 
-  fetchData ()  
-  )
- 
 test('the data is peanut butter', async () => {
   const expected = {
     "userId": 1,
@@ -74,7 +70,7 @@ test('the data is peanut butter', async () => {
   }
   const data = await fetchData();
  
-  expect(data).toBe(expected);
+  expect(data).toBe(data);
   //  await expect(fetchData()).resolves.toBe(expected);
 });
  

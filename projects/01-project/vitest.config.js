@@ -32,6 +32,7 @@ export default defineConfig({
     }),
   ],
   test: {
+    setupFiles: ["./mySetup.ts"],
     globals: true,
     coverage: {
       provider: "istanbul",

@@ -19,6 +19,8 @@
 // }
 
 import { useAsyncData } from "#app";
+ 
+
 export const fetchData = async()=>{
     const { data} = await useAsyncData(
         "city",
