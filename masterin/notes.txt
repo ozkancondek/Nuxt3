@@ -13,3 +13,11 @@
 =>HMR(Hot Module reloading) = nuxt understand any changes in app(template ort page) and render in browser immediately.But if u delete or add some files, maybe u can start dev server again
 
 =>open vue dev console and see all routes
+
+=> thoose are my roots
+/ (pages/index.vue) => here is main root
+/course (page/course.vue) =>here is my course route in page directory
+/course/lesson (pages/course/lesson) =>i created a seperated folder (course) But
+i still have course.vue route in page directory. So if i add to <NuxtApp> to the course.vue
+thats mean i can also see course.vue page index in course/lesson route
+wit adding NuxtPage iam saying that, it will be visible everything also in child routes which are countinue with same route name
