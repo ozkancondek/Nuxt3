@@ -1,0 +1,15 @@
+#to go spesific lesson
+-in project directory
+    -git log --oneline
+    -git checkout -b from-beginning a0f0322
+-to go other branches
+    -git checkout - (go to main back)
+    -go to 9. lesson, one lesson before 10. lesson
+     -git checkout -b continue-on <commit_id>
+
+-add a page
+    -npx nuxi add page <page_name>
+
+=>HMR(Hot Module reloading) = nuxt understand any changes in app(template ort page) and render in browser immediately.But if u delete or add some files, maybe u can start dev server again
+
+=>open vue dev console and see all routes
