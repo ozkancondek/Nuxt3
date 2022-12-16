@@ -7,23 +7,28 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "storybook": "start-storybook -p 6006 -s ./public,./assets",
-    "test": "vitest ",
+    "test": "vitest --run --no-threads",
+    "test:watch": "vitest ",
     "test:update": "vitest -u",
+    "test:ui": "vitest --ui",
+    "test:st":"vitest --silent",
+    "test:ci": "vitest --run --no-threads --reporter junit --outputFile reports/junit.xml",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@storybook/vue3": "^6.5.13",
+    "@types/node": "18.7.0",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vitest/coverage-istanbul": "^0.25.3",
     "@vue/test-utils": "^2.2.3",
     "fs": "^0.0.1-security",
+    "jest-junit": "^15.0.0",
     "jsdom": "^20.0.2",
     "node-fetch": "^3.3.0",
     "nuxt": "3.0.0-rc.13",
     "unplugin-auto-import": "^0.11.4",
     "vite-plugin-nuxt-test": "^0.0.10",
-    "vitest": "^0.25.2",
-    "@types/node":"18.7.0"
+    "vitest": "^0.25.2"
   },
   "dependencies": {
     "@nuxt/test-utils-edge": "^3.0.1-rc.0-27817134.e85e3ab",
