@@ -4,17 +4,16 @@
     <p>Now if you chenge the params in adress bar, u will see the macig</p>
     <p>Chapter Slug : {{ chapter.title }}</p>
     <p>Lesson Slug: {{ lesson.title }}</p>
+    <VideoPlayer v-if="lesson.videoId" :videoId="lesson.videoId" />
   </div>
 </template>
 <script setup>
 const course = useCourse();
-
 const route = useRoute();
 const chapter = computed(() => {
   //take chapterName and find it in courses
   return course.chapters.find((e) => e.slug === route.params.chapterSlug);
 });
-
 const lesson = computed(() => {
   return chapter.value.lessons.find((e) => e.slug === route.params.lessonSlug);
 });
