@@ -20,4 +20,11 @@ const chapter = computed(() => {
 const lesson = computed(() => {
   return chapter.value.lessons.find((e) => e.slug === route.params.lessonSlug);
 });
+
+const title = computed(() => {
+  return `${lesson.value.title}-${course.title}`;
+});
+useHead({
+  title: title.value,
+});
 </script>
