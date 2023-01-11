@@ -5,6 +5,9 @@
     <p>Chapter Slug : {{ chapter.title }}</p>
     <p>Lesson Slug: {{ lesson.title }}</p>
     <VideoPlayer v-if="lesson.videoId" :videoId="lesson.videoId" />
+    <NuxtLink v-if="lesson.downloadUrl" :to="lesson.downloadUrl"
+      >Download Video</NuxtLink
+    >
   </div>
 </template>
 <script setup>

@@ -32,3 +32,8 @@
 <script setup>
 const { chapters } = useCourse();
 </script>
+<style scoped>
+.router-link-active {
+  @apply text-blue-500;
+}
+</style>
