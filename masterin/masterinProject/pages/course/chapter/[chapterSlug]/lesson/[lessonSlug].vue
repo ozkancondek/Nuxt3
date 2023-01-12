@@ -9,6 +9,7 @@
       >Download Video</NuxtLink
     >
     <br /><br />
+
     <LessonCompleteButton
       :model-value="isLessonComplete"
       @update:model-value="toggleComplete"
@@ -30,9 +31,11 @@ const title = computed(() => {
   return `${lesson.value.title}-${course.title}`;
 });
 //store progress in useState to reach when browse the pages
-const progress = useState("progress", () => {
+/* const progress = useState("progress", () => {
   return [];
-});
+}); */
+const progress = useLocalStorage("progress", []);
+//comes with outo imports from vueuse
 const isLessonComplete = computed(() => {
   if (!progress.value[chapter.value.number - 1]) {
     return false;
@@ -55,3 +58,5 @@ useHead({
   title: title.value,
 });
 </script>
+
+<!-- <ClientOnly></ClientOnly>  tag for .clent-->
