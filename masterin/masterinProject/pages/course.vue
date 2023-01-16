@@ -31,6 +31,14 @@
 
 <script setup>
 const { chapters } = useCourse();
+
+//definePageMeta({
+//remove layout
+//layout: false,
+//use custom one
+//layout: "custom",
+//another way is in app.vue
+//});
 </script>
 <style scoped>
 .router-link-active {
