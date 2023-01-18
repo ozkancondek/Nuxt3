@@ -14,6 +14,14 @@
       :model-value="isLessonComplete"
       @update:model-value="toggleComplete"
     ></LessonCompleteButton>
+    <br />
+    <br />
+    <button
+      @click="throw createError('Error occured');"
+      class="border-solid border-2 border-indigo-600"
+    >
+      Throw error example button
+    </button>
   </div>
 </template>
 <script setup>

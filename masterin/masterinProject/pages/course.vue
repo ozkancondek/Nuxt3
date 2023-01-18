@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="border">
     <div>Course.vue in page directory</div>
 
     <p>
@@ -11,6 +11,7 @@
     <hr />
     <br />
     <br />
+
     <h1><strong>Chapters</strong></h1>
     <div v-for="chapter in chapters" :key="chapter.slug">
       <h4>{{ chapter.title }}</h4>
@@ -24,13 +25,35 @@
         <span>{{ index + 1 }}.</span> <span>{{ lesson.title }}</span> <br />
       </NuxtLink>
     </div>
+    <NuxtErrorBoundary>
+      <NuxtPage />
+      <template #error="{ error }">
+        <p>
+          oh no, something went wrong
 
-    <NuxtPage />
+          <code>{{ error }}</code>
+        </p>
+        <p>
+          NuxtErrorBoundr prevented bubling and showed error template instance
+          of NuxtPage
+        </p>
+        <button
+          class="border-solid border-2 border-indigo-600"
+          @click="resetError(error)"
+        >
+          Reset Error
+        </button>
+      </template>
+    </NuxtErrorBoundary>
   </div>
 </template>
 
 <script setup>
 const { chapters } = useCourse();
+
+const resetError = (error) => {
+  error.value = null;
+};
 
 //definePageMeta({
 //remove layout
@@ -41,6 +64,9 @@ const { chapters } = useCourse();
 //});
 </script>
 <style scoped>
+.border {
+  border: 2px solid red;
+}
 .router-link-active {
   @apply text-blue-500;
 }
