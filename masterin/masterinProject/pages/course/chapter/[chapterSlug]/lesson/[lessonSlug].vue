@@ -27,13 +27,31 @@
 <script setup>
 const course = useCourse();
 const route = useRoute();
+
 const chapter = computed(() => {
+  if (route.params.lessonSlug === "3-typing-component-events") {
+    console.log(
+      route.params.paramthatdoesnotexistwhoops.capitalizeIsNotAMethod()
+    );
+  }
   //take chapterName and find it in courses
   return course.chapters.find((e) => e.slug === route.params.chapterSlug);
 });
+if (!chapter.value) {
+  throw createError({
+    statusCode: 404,
+    message: "chapter not found",
+  });
+}
 const lesson = computed(() => {
   return chapter.value.lessons.find((e) => e.slug === route.params.lessonSlug);
 });
+if (!lesson.value) {
+  throw createError({
+    statusCode: 404,
+    message: "lesson not found",
+  });
+}
 
 const title = computed(() => {
   return `${lesson.value.title}-${course.title}`;

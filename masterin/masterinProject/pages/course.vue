@@ -35,7 +35,7 @@
         </p>
         <p>
           NuxtErrorBoundr prevented bubling and showed error template instance
-          of NuxtPage
+          of NuxtPage. So i wrapped my child route with error boundary
         </p>
         <button
           class="border-solid border-2 border-indigo-600"
@@ -51,8 +51,15 @@
 <script setup>
 const { chapters } = useCourse();
 
-const resetError = (error) => {
+const resetError = async (error) => {
+  //redirect to route first and reset the error
+  await navigateTo("/course");
   error.value = null;
+  //in situation no save use code below
+  /*   throw createError({
+    fatal: true,
+    message: "fatal error",
+  }); */
 };
 
 //definePageMeta({
