@@ -11,6 +11,10 @@
     <hr />
     <br />
     <br />
+    <h1>{{ title }}</h1>
+    <hr />
+    <br />
+    <br />
 
     <h1><strong>Chapters</strong></h1>
     <div v-for="chapter in chapters" :key="chapter.slug">
@@ -49,7 +53,7 @@
 </template>
 
 <script setup>
-const { chapters } = useCourse();
+const { chapters, title } = useCourse();
 
 const resetError = async (error) => {
   //redirect to route first and reset the error
