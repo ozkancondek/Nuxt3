@@ -84,30 +84,34 @@ useHead({
   title: title.value,
 });
 definePageMeta({
-  middleware: function ({ params }, from) {
-    const course = useCourse();
-    const chapter = course.chapters.find(
-      (chapter) => chapter.slug === params.chapterSlug
-    );
-    if (!chapter) {
-      return abortNavigation(
-        createError({
-          statusCode: 404,
-          message: "Chapter not found",
-        })
+  middleware: [
+    function ({ params }, from) {
+      const course = useCourse();
+      const chapter = course.chapters.find(
+        (chapter) => chapter.slug === params.chapterSlug
       );
-    }
-    const lesson = chapter.lessons.find(
-      (lesson) => lesson.slug === params.lessonSlug
-    );
-    if (!lesson) {
-      return abortNavigation(
-        createError({
-          statusCode: 404,
-          message: "lesson not found",
-        })
+      if (!chapter) {
+        return abortNavigation(
+          createError({
+            statusCode: 404,
+            message: "Chapter not found",
+          })
+        );
+      }
+      const lesson = chapter.lessons.find(
+        (lesson) => lesson.slug === params.lessonSlug
       );
-    }
-  },
+      if (!lesson) {
+        return abortNavigation(
+          createError({
+            statusCode: 404,
+            message: "lesson not found",
+          })
+        );
+      }
+    },
+    //second middleware to user without authentication we will use it commonly thats why moved to the middleware folder
+    "auth",
+  ],
 });
 </script>
