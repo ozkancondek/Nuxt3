@@ -15,6 +15,8 @@
     <hr />
     <br />
     <br />
+    <UserCard />
+    <br /><br />
 
     <h1><strong>Chapters</strong></h1>
     <div v-for="chapter in chapters" :key="chapter.slug">
