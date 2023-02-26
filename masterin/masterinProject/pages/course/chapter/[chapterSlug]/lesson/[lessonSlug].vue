@@ -27,6 +27,8 @@
 <script setup>
 const course = useCourse();
 const route = useRoute();
+const { chapterSlug, lessonSlug } = route.params;
+const lesson = await useLesson(chapterSlug, lessonSlug);
 
 const chapter = computed(() => {
   if (route.params.lessonSlug === "3-typing-component-events") {
@@ -43,9 +45,6 @@ if (!chapter.value) {
     message: "chapter not found",
   });
 }
-const lesson = computed(() => {
-  return chapter.value.lessons.find((e) => e.slug === route.params.lessonSlug);
-});
 if (!lesson.value) {
   throw createError({
     statusCode: 404,
